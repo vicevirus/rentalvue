@@ -15,10 +15,11 @@
         
  <center>
    <b-card style="width: 600px;height: 436px;text-align: center">
-    <h5>Lokasi Pickoff</h5><gmap-autocomplete @place_changed="setPlace"></gmap-autocomplete>
-    <h5>Lokasi Dropoff</h5><gmap-autocomplete @place_changed="setPlace"></gmap-autocomplete>
+    <h5>Pick location</h5><gmap-autocomplete style="width:550px;border-radius: 7px;" @place_changed="setPlace"></gmap-autocomplete>
+    <h5>Drop Location</h5><gmap-autocomplete style="width:550px;border-radius: 7px;" @place_changed="setPlace"></gmap-autocomplete>
     <h5>Pickoff date</h5><b-form-input type="date"></b-form-input>
     <h5>Dropoff date</h5><b-form-input type="date"> </b-form-input>
+    
     <h5>Start time and end time</h5>
     <el-time-picker is-range v-model="value4" range-separator=">" start-placeholder="Start time" end-placeholder="End time">
   </el-time-picker>
