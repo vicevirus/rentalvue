@@ -12,9 +12,9 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 import * as VueGoogleMaps from "vue2-google-maps"
 import Vuetify from 'vuetify'
-import VueStripeCheckout from 'vue-stripe-checkout';
+import MQ from 'vue-match-media/src'
+Vue.use(MQ)
 
-Vue.use(VueStripeCheckout, 'pk_test_7LrVtQ76r54ZOhMHhNYR5zpY')
 
 Vue.use(Vuetify)
 
@@ -34,10 +34,16 @@ Vue.use(SuiVue)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+
+
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+   mq: {
+    phone: '(max-width: 768px)',
+    tablet: '(max-width: 1024px)',
+    desktop: '(min-width: 1024px)'
+   }
 })

@@ -1,5 +1,29 @@
 <template>
-  <div class="Login" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+<div v-if="$mq.phone" >
+
+<center><b-jumbotron bg-variant="danger" text-variant="white">
+  <template slot="header">
+    Login page
+  </template>
+</b-jumbotron></center>
+      <center><el-card class="box-card" style="width: auto">
+    <form @submit.prevent="login">
+      <form class="form-signin" @submit.prevent="login">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input v-model="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input v-model="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    </form>
+
+    </el-card></center>
+
+  </div>
+
+
+
+  <div v-else class="Login" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
       <center><b-jumbotron bg-variant="danger" text-variant="white">
   <template slot="header">
     Login page

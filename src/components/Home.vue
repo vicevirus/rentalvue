@@ -1,5 +1,38 @@
 <template>
-  <div class="hello" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+
+<div v-if="$mq.phone" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+
+  <center><b-jumbotron bg-variant="danger" text-variant="white">
+  <template slot="header">
+    Car Rental
+  </template>
+  <template slot="lead">
+    Renting a car have never been easier
+  </template>
+
+  <center>
+   <b-card style="width: auto;height: auto;color: black">
+    <h1>Pick location</h1>
+    <gmap-autocomplete placeholder="Pickoff location" style="width:auto;border-radius: 7px;" @place_changed="setPlace"></gmap-autocomplete>
+    <h5>Drop Location</h5><gmap-autocomplete placeholder="Dropoff location" style="width:auto;border-radius: 7px;" @place_changed="setPlace"></gmap-autocomplete>
+    <h5>Pickoff date</h5><b-form-input type="date"></b-form-input>
+    <h5>Dropoff date</h5><b-form-input type="date"> </b-form-input>
+    
+    <h5>Start time and end time</h5>
+    <el-time-picker style="width: auto;height: auto" is-range v-model="value4" range-separator=">" start-placeholder="Start time" end-placeholder="End time">
+  </el-time-picker>
+
+ <button class="ui primary button" onclick='location.href="/#/Car"' style="margin:30px">
+   Search for your desired car
+   </button>
+   </b-card>
+  </center>
+
+</b-jumbotron></center>
+  </b-card>
+
+  </div>
+  <div v-else class="hello" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
 
 
 

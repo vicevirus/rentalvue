@@ -1,21 +1,22 @@
 <template>
-  <div class="Home" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
-    <center><b-jumbotron bg-variant="danger" text-variant="white">
+<div v-if="$mq.phone">
+
+<center><b-jumbotron bg-variant="danger" text-variant="white">
   <template slot="header">
     Payment
   </template>
 </b-jumbotron></center>
-<b-card style="width: 1000px;height: 467px;text-align: center;margin:auto">
-  <h1 class="card-text"><b>
+<b-card style="color:black;width: auto;height: auto;text-align: center;margin:auto">
+  <h1 class="card-text" style="color:black"><b>
                 Checkout list</b>
             </h1>
-        <b-list-group flush>
+        <b-list-group flush >
             <b-list-group-item><h3><b>Proton Saga</b></h3> <h1>RM1829.00</h1></b-list-group-item>
         </b-list-group>
-        <h1 class="card-text"><b>
+        <h1 class="card-text" style="color:black"><b>
                 Grand total <h1><b>RM1829.00</b></h1></b>
             </h1>
-            <h1 class="card-text">
+            <h1 class="card-text" style="color:black">
                 You can pay through these portals
             </h1>
             <a href="https://www.paynet.my/business-fpx.html"><img src="https://www.mybsn.com.my/medias/about_bsn_logo.gif" style="width:100px"/></a>
@@ -23,7 +24,37 @@
             <a href="https://maybank.com.my"><img src="https://assets.nst.com.my/images/articles/maybank_13_1513248610.jpg" style="width:100px"/></a>
             <a href="https://ambank.com.my"><img src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/032011/ambank.png?itok=1JWJzr2D" style="width:100px"/></a>
 
-            <h1 class="card-text">
+            <h1 class="card-text" style="color:black">
+                Thanks for renting with us!
+            </h1>
+</b-card>
+
+</div>
+  <div v-else class="Home" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+    <center><b-jumbotron bg-variant="danger" text-variant="white">
+  <template slot="header">
+    Payment
+  </template>
+</b-jumbotron></center>
+<b-card style="color:black;width: 600px;height: auto;text-align: center;margin:auto">
+  <h1 class="card-text" style="color:black"><b>
+                Checkout list</b>
+            </h1>
+        <b-list-group flush >
+            <b-list-group-item><h3><b>Proton Saga</b></h3> <h1>RM1829.00</h1></b-list-group-item>
+        </b-list-group>
+        <h1 class="card-text" style="color:black"><b>
+                Grand total <h1><b>RM1829.00</b></h1></b>
+            </h1>
+            <h1 class="card-text" style="color:black">
+                You can pay through these portals
+            </h1>
+            <a href="https://www.paynet.my/business-fpx.html"><img src="https://www.mybsn.com.my/medias/about_bsn_logo.gif" style="width:100px"/></a>
+            <a href="https://cimbclicks.com.my"><img src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/0016/4723/brand.gif?itok=XfB0zFbw" style="width:100px"/></a>
+            <a href="https://maybank.com.my"><img src="https://assets.nst.com.my/images/articles/maybank_13_1513248610.jpg" style="width:100px"/></a>
+            <a href="https://ambank.com.my"><img src="https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/032011/ambank.png?itok=1JWJzr2D" style="width:100px"/></a>
+
+            <h1 class="card-text" style="color:black">
                 Thanks for renting with us!
             </h1>
 </b-card>

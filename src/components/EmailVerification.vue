@@ -1,5 +1,23 @@
 <template>
-  <div class="Home" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+ <div v-if="$mq.phone">
+     <center><b-jumbotron bg-variant="danger" text-variant="white">
+  <template slot="header">
+    Email Verification
+  </template>
+</b-jumbotron></center>
+<b-card style="width: auto;height: auto;text-align: center;margin:auto">
+  <h1>Please check your email for verification and you may proceed</h1>
+
+  <button class="ui primary button" onclick='location.href="/#/Car"' style="margin:30px">
+   Rent A Car Now
+   </button>
+   <button class="ui primary button" onclick='location.href="/#/Profile"' style="margin:30px">
+   Visit your profile
+   </button>
+</b-card>
+ </div>
+
+  <div v-else class="Home" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
     <center><b-jumbotron bg-variant="danger" text-variant="white">
   <template slot="header">
     Email Verification

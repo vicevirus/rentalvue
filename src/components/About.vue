@@ -1,5 +1,25 @@
 <template>
-  <div class="Home" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+<div v-if="$mq.phone">
+
+  <center><b-jumbotron bg-variant="danger" text-variant="white">
+  <template slot="header">
+    About our website
+  </template>
+</b-jumbotron></center>
+
+<b-card style="width: auto;height: auto;text-align: center;margin:auto" >
+  <b-jumbotron>
+  <template slot="lead">
+    <h5>Car Rental is a website that will help you find your desired car in a certain area.It will not only ease the process but it will also save your time searching for your desired car.
+      It will also simplify the transaction proccess for achieving your goal which is to rent a car.You wont need to waste energy going to a rental shop etc.
+      Everything will be done in few minutes.
+    </h5>
+  </template>
+  </b-jumbotron>
+</b-card>
+
+  </div>
+  <div v-else class="About" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
     <center><b-jumbotron bg-variant="danger" text-variant="white">
   <template slot="header">
     About our website
