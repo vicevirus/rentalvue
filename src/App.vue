@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$mq.phone" v-bind:style="{ 'background-image': 'url(' + imgPath + ')' }">
+  <div v-if="$mq.phone" >
     <center><b-navbar-brand style="color:#DC3546" href="#/">Car Rental</b-navbar-brand></center>
     <el-menu> 
       <el-submenu index="1">
